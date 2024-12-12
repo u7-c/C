@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+int main() 
+{
+    double calculated=0.0, actual, difference;
+    int x = 1;
+    actual = exp(1);
+    while (1) {
+double numerator = 2 * x + 1;
+        double denominator = 2 * x - 1;
+        double base = numerator / denominator;
+        calculated = pow(base, x);
+        difference = fabs(calculated - actual);
+        if (difference < 0.000001) 
+        {
+            break;
+        }
+  x++; 
+    }
+    printf("Value of x: %d\n", x);
+    printf("Approximation of e: %.7f\n", calculated);
+    printf("Actual value of e: %.7f\n", actual);
+    return 0;
+}
