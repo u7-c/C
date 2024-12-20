@@ -1,0 +1,1 @@
+// 7.	Write a program in c to find sum of array elements using recursion.
